@@ -3,6 +3,9 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import runner.RunCucumber;
+import support.Utils;
+
+import java.io.IOException;
 
 import static support.Commands.*;
 
@@ -25,17 +28,20 @@ public class PesquisaPage extends RunCucumber {
     }
     public void inserirTextoCampoPesquisa(String pesquisa) {
         fillField(campoPesquisa, pesquisa);
+
     }
     public void realizarPesquisa() {
         clickElement(botaoPesquisar);
     }
-    public void validarPesquisa(String mensagem) {
+    public void validarPesquisa(String mensagem) throws IOException {
         checkMensagem(By.xpath("//span[contains(.,'juros')]"),mensagem );
+        Utils.tiraPrint("Pesquisa válida");
     }
     public void inserirTextoCampoPesquisaInvalido(String pesquisa) {
         fillField(campoPesquisa, pesquisa);
     }
-    public void validarPesquisaDeCampoInvalido(String mensagem) {
+    public void validarPesquisaDeCampoInvalido(String mensagem) throws IOException {
         checkMensagem(By.xpath("//h1[contains(.,'Nenhum resultado')]"), mensagem);
+        Utils.tiraPrint("Pesquisa inválida");
     }
 }

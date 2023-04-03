@@ -5,6 +5,9 @@ import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 import pages.PesquisaPage;
 import runner.RunCucumber;
+import support.Utils;
+
+import java.io.IOException;
 
 public class PesquisaSucessoStep extends RunCucumber {
 
@@ -24,7 +27,8 @@ public class PesquisaSucessoStep extends RunCucumber {
         pesquisaPage.realizarPesquisa();
     }
     @Então("^o resultado deverá ser referente a pequisa realizada \"([^\"]*)\"$")
-    public void o_resultado_deverá_ser_referente_a_pequisa_realizada(String mensagem) {
+    public void o_resultado_deverá_ser_referente_a_pequisa_realizada(String mensagem) throws IOException {
         pesquisaPage.validarPesquisa(mensagem);
+
     }
 }

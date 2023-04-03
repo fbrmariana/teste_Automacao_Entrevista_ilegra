@@ -18,8 +18,7 @@ Funcionalidade: Pesquisa blog agi
     Exemplos:
       | pesquisa     |mensagem             |pesquisar
       | juros        |juros                |pesquisa valida
-
-
+    
   @pesquisaDadosInvalidos
   Esquema do Cenário: Validar funcionalidade de pesquisa com dados invalidos clicando em <pesquisar>
     Quando preencho algum texto no campo pesquisa "<pesquisa>"
