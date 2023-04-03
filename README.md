@@ -7,9 +7,15 @@ pesquisa no site https://blogdoagi.com.br/
 
 [Java 8](#Java8)
 
-[IntelliJ](#IntelliJ)
+[IntelliJ Idea](#IntelliJ) 
 
 [Selenium](#Selenium)
+
+[Maven](#Selenium)
+
+[Cucumber](#Selenium)
+
+
 
 
 #### Como rodar?

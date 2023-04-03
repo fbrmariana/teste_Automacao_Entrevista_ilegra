@@ -13,10 +13,8 @@ import java.io.IOException;
 
 public class Utils extends RunCucumber {
 
-
     public static void tiraPrint(String fileName)throws IOException {
         File scrFile = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(scrFile,new File("src\\test\\java\\evidencias\\evidencia_" + fileName +".png"));
     }
-
 }
