@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import runner.RunCucumber;
 
+import static support.Commands.*;
+
 public class PesquisaPage extends RunCucumber {
 
     // Elementos
@@ -17,30 +19,23 @@ public class PesquisaPage extends RunCucumber {
         getDriver("chrome").get(URL);
         getDriver().manage().window().maximize();
     }
-
     public void clicarLupaPesquisa() {
-        getDriver().findElement(lupaDePesquisa).click();
+        waitElementBeVisible(By.id("search-open"),9000);
+        clickElement(lupaDePesquisa);
     }
-
-    public void inserirTextoCampoPesquisa() {
-        getDriver().findElement(campoPesquisa).sendKeys("juros");
+    public void inserirTextoCampoPesquisa(String pesquisa) {
+        fillField(campoPesquisa, pesquisa);
     }
-
     public void realizarPesquisa() {
-        getDriver().findElement(botaoPesquisar).click();
+        clickElement(botaoPesquisar);
     }
-
-    public void validarPesquisa() {
-        String validarPesquisa = getDriver().findElement(By.xpath("//span[contains(.,'juros')]")).getText();
-        Assert.assertEquals("juros", "juros", validarPesquisa);
+    public void validarPesquisa(String mensagem) {
+        checkMensagem(By.xpath("//span[contains(.,'juros')]"),mensagem );
     }
-
-    public void inserirTextoCampoPesquisaInvalido() {
-        getDriver().findElement(campoPesquisa).sendKeys("/*-*/");
+    public void inserirTextoCampoPesquisaInvalido(String pesquisa) {
+        fillField(campoPesquisa, pesquisa);
     }
-
-    public void validarPesquisaDeCampoInvalido() {
-        String validarPesquisaInvalido = getDriver().findElement(By.xpath("//h1[contains(.,'Nenhum resultado')]")).getText();
-        Assert.assertEquals("Nenhum resultado", "Nenhum resultado", validarPesquisaInvalido);
+    public void validarPesquisaDeCampoInvalido(String mensagem) {
+        checkMensagem(By.xpath("//h1[contains(.,'Nenhum resultado')]"), mensagem);
     }
 }

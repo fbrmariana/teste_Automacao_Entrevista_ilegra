@@ -3,43 +3,58 @@
     "line": 4,
     "elements": [
       {
-        "line": 10,
-        "name": "Validar funcionalidade de pesquisa clicando em pesquisar",
+        "line": 9,
+        "name": "Acessar aplicaçao",
         "description": "",
-        "id": "pesquisa-blog-agi;validar-funcionalidade-de-pesquisa-clicando-em-pesquisar",
-        "type": "scenario",
-        "keyword": "Cenário",
+        "type": "background",
+        "keyword": "Contexto",
         "steps": [
           {
             "result": {
-              "duration": 9631504600,
+              "duration": 17939989900,
               "status": "passed"
             },
-            "line": 11,
+            "line": 10,
             "name": "que estou na página inicial do blog agi",
             "match": {
               "location": "PesquisaSucessoStep.que_estou_na_página_inicial_do_blog_agi()"
             },
             "keyword": "Dado "
-          },
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Validar funcionalidade de pesquisa clicando em \u003cpesquisar\u003e",
+        "description": "",
+        "id": "pesquisa-blog-agi;validar-funcionalidade-de-pesquisa-clicando-em-\u003cpesquisar\u003e;;2",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
           {
             "result": {
-              "duration": 670392000,
+              "duration": 1315206701,
               "status": "passed"
             },
-            "line": 12,
-            "name": "preencho algum texto no campo pesquisa",
+            "line": 14,
+            "name": "preencho algum texto no campo pesquisa \"juros\"",
             "match": {
-              "location": "PesquisaSucessoStep.preencho_algum_texto_no_campo_pesquisa()"
+              "arguments": [
+                {
+                  "val": "juros",
+                  "offset": 40
+                }
+              ],
+              "location": "PesquisaSucessoStep.preencho_algum_texto_no_campo_pesquisa(String)"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 1015373900,
+              "duration": 1401410401,
               "status": "passed"
             },
-            "line": 13,
+            "line": 15,
             "name": "clicar em pesquisar",
             "match": {
               "location": "PesquisaSucessoStep.clicar_em_pesquisar()"
@@ -48,13 +63,19 @@
           },
           {
             "result": {
-              "duration": 53868600,
+              "duration": 240488499,
               "status": "passed"
             },
-            "line": 14,
-            "name": "o resultado deverá ser referente a pequisa realizada",
+            "line": 16,
+            "name": "o resultado deverá ser referente a pequisa realizada \"juros\"",
             "match": {
-              "location": "PesquisaSucessoStep.o_resultado_deverá_ser_referente_a_pequisa_realizada()"
+              "arguments": [
+                {
+                  "val": "juros",
+                  "offset": 54
+                }
+              ],
+              "location": "PesquisaSucessoStep.o_resultado_deverá_ser_referente_a_pequisa_realizada(String)"
             },
             "keyword": "Então "
           }
@@ -69,43 +90,58 @@
         ]
       },
       {
-        "line": 17,
-        "name": "Validar campo pesquisa com dados inválidos",
+        "line": 9,
+        "name": "Acessar aplicaçao",
         "description": "",
-        "id": "pesquisa-blog-agi;validar-campo-pesquisa-com-dados-inválidos",
-        "type": "scenario",
-        "keyword": "Cenário",
+        "type": "background",
+        "keyword": "Contexto",
         "steps": [
           {
             "result": {
-              "duration": 8388630400,
+              "duration": 11330540500,
               "status": "passed"
             },
-            "line": 18,
+            "line": 10,
             "name": "que estou na página inicial do blog agi",
             "match": {
               "location": "PesquisaSucessoStep.que_estou_na_página_inicial_do_blog_agi()"
             },
             "keyword": "Dado "
-          },
+          }
+        ]
+      },
+      {
+        "line": 31,
+        "name": "Validar funcionalidade de pesquisa com dados invalidos clicando em \u003cpesquisar\u003e",
+        "description": "",
+        "id": "pesquisa-blog-agi;validar-funcionalidade-de-pesquisa-com-dados-invalidos-clicando-em-\u003cpesquisar\u003e;;2",
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
           {
             "result": {
-              "duration": 779150400,
+              "duration": 1230459999,
               "status": "passed"
             },
-            "line": 19,
-            "name": "preencho um texto com dados invalidos",
+            "line": 25,
+            "name": "preencho algum texto no campo pesquisa \"*_*\"",
             "match": {
-              "location": "PesquisaDadosInvalidosStep.preencho_um_texto_com_dados_invalidos()"
+              "arguments": [
+                {
+                  "val": "*_*",
+                  "offset": 40
+                }
+              ],
+              "location": "PesquisaSucessoStep.preencho_algum_texto_no_campo_pesquisa(String)"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 660125500,
+              "duration": 1647790301,
               "status": "passed"
             },
-            "line": 20,
+            "line": 26,
             "name": "clicar em pesquisar",
             "match": {
               "location": "PesquisaSucessoStep.clicar_em_pesquisar()"
@@ -114,13 +150,19 @@
           },
           {
             "result": {
-              "duration": 44050600,
+              "duration": 180237300,
               "status": "passed"
             },
-            "line": 21,
-            "name": "o resultado deverá ser nenhum resultado",
+            "line": 27,
+            "name": "o resultado devera ser nenhum resultado \"Nenhum resultado\"",
             "match": {
-              "location": "PesquisaDadosInvalidosStep.o_resultado_deverá_ser_nenhum_resultado()"
+              "arguments": [
+                {
+                  "val": "Nenhum resultado",
+                  "offset": 41
+                }
+              ],
+              "location": "PesquisaDadosInvalidosStep.o_resultado_devera_ser_nenhum_resultado(String)"
             },
             "keyword": "Então "
           }
